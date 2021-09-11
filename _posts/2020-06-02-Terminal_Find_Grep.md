@@ -1,4 +1,9 @@
-# Terminal commands
+---
+title: "Terminal commands"
+layout: post
+toc: false
+categories: [linux]
+---
 
 ## find
 
