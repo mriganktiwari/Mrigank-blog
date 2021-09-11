@@ -1,0 +1,41 @@
+<h2 id="run-a-remote-jupyter-lab-setup-anywhere">Run a remote Jupyter lab setup anywhere</h2>
+
+<ul>
+  <li>Here I am assuming the remote server with Deep learning setup on Nvidia GPU is on Ubuntu.</li>
+  <li>Install Openssh server on Ubuntu machine is not present already.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">sudo apt-get install openssh-server</code></li>
+      <li>Password required of remote machine</li>
+    </ul>
+  </li>
+  <li>SSH from your local computer to remote Ubuntu machine
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">ssh remoteuser@remoteIP</code></li>
+    </ul>
+  </li>
+  <li>Setup conda virtual envs in remote system if not already resent as per requirement
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">conda activate &lt;env_name&gt;</code></li>
+    </ul>
+  </li>
+  <li>Fire up a <strong>jupyter lab</strong> session with below command
+    <ul>
+      <li>remoteuser<strong>@</strong>remotehost<strong>:</strong> <code class="language-plaintext highlighter-rouge">jupyter lab --no-browser --port=XXXX</code></li>
+      <li><code class="language-plaintext highlighter-rouge">XXXX</code> - any port in your remote you wish to use, by default its 8888 or 8000</li>
+      <li>you would get a link in this form -  <code class="language-plaintext highlighter-rouge">http://localhost:8888/?token=&lt;token&gt;</code></li>
+    </ul>
+  </li>
+  <li>Forward port <code class="language-plaintext highlighter-rouge">XXXX</code> (on remote machine) to <code class="language-plaintext highlighter-rouge">YYYY</code> (on local machine) and listen to it.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">localuser@localhost: ssh -N -f -L localhost:YYYY:localhost:XXXX remoteuser@remotehost</code></li>
+      <li>Password required of local machine</li>
+      <li>In case the <code class="language-plaintext highlighter-rouge">YYYY</code> port is busy, run below commands to kill the process
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">lsof -n -i4TCP:YYYY</code> : to get the PID for this port</li>
+          <li><code class="language-plaintext highlighter-rouge">kill &lt;PID&gt;</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Open the link <code class="language-plaintext highlighter-rouge">localhost:YYYY</code> in browser in local machine.</li>
+</ul>

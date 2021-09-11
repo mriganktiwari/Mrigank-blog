@@ -1,0 +1,114 @@
+<h2 id="deep-learning-rig-setup---ubuntu-1910--2004">Deep Learning rig setup - Ubuntu 19.10 &amp; 20.04</h2>
+<ul>
+  <li>Resources: <a href="https://linuxconfig.org/how-to-install-cuda-on-ubuntu-20-04-focal-fossa-linux">one</a> and <a href="https://sanyambhutani.com/deep-learning-software-setup--cuda-10---ubuntu-18-04/">two</a></li>
+</ul>
+
+<h3 id="ubuntu-1910-installation">Ubuntu 19.10 installation</h3>
+
+<h3 id="purge-nvidia-drivers">Purge Nvidia drivers</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sudo apt-get purge nvidia*</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo lshw -c video | grep 'configuration'</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo apt-get remove --purge nvidia-*</code></li>
+</ul>
+
+<h3 id="disable-nouveau-drivers-open-source-nvidia-gpu-drivers">Disable Nouveau drivers (open source Nvidia GPU drivers)</h3>
+
+<ul>
+  <li>
+    <p>Insert</p>
+
+    <p><code class="language-plaintext highlighter-rouge">blacklist nouveau</code>
+<code class="language-plaintext highlighter-rouge">blacklist lbm-nouveau</code>
+<code class="language-plaintext highlighter-rouge">options nouveau modeset=0</code>
+<code class="language-plaintext highlighter-rouge">alias nouveau off</code>
+<code class="language-plaintext highlighter-rouge">alias lbm-nouveau off</code></p>
+
+    <p>into the file</p>
+
+    <p><code class="language-plaintext highlighter-rouge">/etc/modprobe.d/blacklist.conf</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sudo reboot</code></p>
+  </li>
+</ul>
+
+<h3 id="find-recommended-drivers">Find recommended drivers</h3>
+
+<p><code class="language-plaintext highlighter-rouge">ubuntu-drivers devices</code></p>
+
+<h3 id="download-and-install-the-recommended-drivers">Download and install the recommended drivers</h3>
+
+<ul>
+  <li>
+    <p>Download the recommended drivers as per <strong>above</strong> step from <a href="https://www.nvidia.in/Download/index.aspx?lang=en-in">here</a>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">chmod +x NVIDIA-Linux-x86_64-440.64.run</code></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sudo ./NVIDIA-Linux-x86_64-440.64.run</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nvidia-smi</code></li>
+</ul>
+
+<h3 id="install-cuda-as-per-nvidia-driver-version">Install CUDA as per Nvidia driver version:</h3>
+
+<ul>
+  <li>Confirm CUDA version from <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html">here</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">wget http://developer.download.nvidia.com/compute/cuda/10.1/Prod/local_installers/cuda_10.1.243_418.87.00_linux.run</code></li>
+  <li><code class="language-plaintext highlighter-rouge">chmod +x cuda_10.1.243_418.87.00_linux.run</code></li>
+  <li>First way to install - <code class="language-plaintext highlighter-rouge">sudo ./cuda_10.1.243_418.87.00_linux.run</code></li>
+  <li>Second - <code class="language-plaintext highlighter-rouge">sudo apt install nvidia-cuda-toolkit</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo reboot</code></li>
+  <li><code class="language-plaintext highlighter-rouge">nvcc -V</code>, the result should be CUDA version you just installed.</li>
+</ul>
+
+<h3 id="cudnn-installation">CuDNN installation</h3>
+
+<ul>
+  <li>Download appropriate file from <a href="https://developer.nvidia.com/cudnn">here</a>.</li>
+  <li><code class="language-plaintext highlighter-rouge">tar -zxvf cudnn-10.1-linux-x64-v7.6.5.32.tgz</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo cp -P cuda/lib64/* /usr/local/cuda-10.1/lib64/</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo cp  cuda/include/* /usr/local/cuda-10.1/include</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sudo chmod a+r /usr/local/cuda-10.1/include/cudnn.h</code></li>
+</ul>
+
+<h3 id="ubuntu-customization">Ubuntu customization</h3>
+
+<ol>
+  <li>Enable Gnome extensions from <a href="https://extensions.gnome.org/">here</a>.
+    <ul>
+      <li>Install Clipboard Indicator</li>
+      <li>Install “Sound Input &amp; Output Device chooser”</li>
+      <li>Use dconf-editor
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">sudo apt install dconf-editor</code></li>
+          <li>Open dconf-editor</li>
+          <li>Goto path <code class="language-plaintext highlighter-rouge">org/gnome/shell/extensions/dash-to-dock</code></li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Customize “click action” to <code class="language-plaintext highlighter-rouge">minimize</code></td>
+                  <td>customize “Running indicaor style” to <code class="language-plaintext highlighter-rouge">Dashes</code>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Customizing Terminal profiles-
+    <ul>
+      <li>Gogh terminal - <a href="https://github.com/Mayccoll/Gogh">Github</a>
+        <ul>
+          <li>Install - <code class="language-plaintext highlighter-rouge">bash -c  "$(wget -qO- https://git.io/vQgMr)"</code></li>
+          <li>It gives choices of 185 color schemes - I only tried 19: Brogrammer as of now.</li>
+          <li>It’ll create profile for you, restart the terminal and see preferences</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Edit how my <strong>bash promt</strong> looks like.</li>
+</ol>
