@@ -1,4 +1,9 @@
-# My running journey
+---
+title: "My running journey"
+description: "The longest and hardest running periods I lived yet."
+layout: post
+toc: false
+---
 
 Let me admit, today's date looks great *20-02-2020*, although its not Palindrome, which was on *02-02-2020*. Amazing isn't it, two great looking date in same month.
 
