@@ -1,6 +1,9 @@
-# Mounting a storage device on to a file-system
-
-
+---
+title: "Mounting a storage device on to a file-system"
+layout: post
+toc: false
+categories: [linux]
+---
 
 - ## Issue:
 
