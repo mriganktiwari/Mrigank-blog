@@ -1,3 +1,11 @@
+---
+title: "Deep NLP resources"
+description: "Resources for NLP"
+layout: post
+toc: false
+categories: [machine learning]
+---
+
 *I am currently working on audio/speech processing, TTS etc., so...*
 
 ### Deep Learning in Speech resources:
