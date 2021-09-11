@@ -1,6 +1,12 @@
-## Run a remote Jupyter lab setup anywhere
+---
+title: "Run a remote Jupyter lab setup anywhere"
+description: "Using jupyter lab hosted on a remote server"
+layout: post
+toc: false
+categories: [setup, deep learning, gpu]
+---
 
-
+## 
 
 - Here I am assuming the remote server with Deep learning setup on Nvidia GPU is on Ubuntu.
 - Install Openssh server on Ubuntu machine is not present already.
