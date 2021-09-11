@@ -1,5 +1,5 @@
 ---
-title: "Deep NLP resources"
+title: "Deep learning resources: Speech"
 description: "Resources for NLP"
 layout: post
 toc: false
