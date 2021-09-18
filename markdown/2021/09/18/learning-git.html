@@ -94,14 +94,10 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#intro">Intro</a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#git-data-model">Git data model</a></li>
-<li class="toc-entry toc-h2"><a href="#dac">DAC</a></li>
-</ul>
-</li>
-</ul><h1 id="intro">
-<a class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro</h1>
+<li class="toc-entry toc-h2"><a href="#intro">Intro</a></li>
+<li class="toc-entry toc-h2"><a href="#data-model">Data model</a></li>
+</ul><h2 id="intro">
+<a class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro</h2>
 
 <p>I have been always felt tormented while using Git when working with teams or even alone. This below comic from xkcd aptly summarizes my experience with Git.</p>
 
@@ -109,22 +105,19 @@ window.onload = wrap_img;
 
 <p>To finally get comfortable, and efficiently use Git, I went through this lecture(link) from <strong>Missing semester</strong> course. Trying to summarize and demnstrate my learnings. Recommend this <a href="https://missing.csail.mit.edu/2020/version-control/">video</a> and lecture notes for detailed walkthrough.</p>
 
-<h2 id="git-data-model">
-<a class="anchor" href="#git-data-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git data model</h2>
-<ol>
-  <li>Terminology:
-    <ul>
-      <li>blob - a file (which is a bunch of bytes) is called a blob</li>
-      <li>tree - a directory is called a tree, it maps names to blobs or treees
-<img src="/Mrigank-blog/images/learning_git/blob_tree.png" alt="" title="credit: ./missing-semester">
-</li>
-    </ul>
-  </li>
-  <li>
-    <h2 id="dac">
-<a class="anchor" href="#dac" aria-hidden="true"><span class="octicon octicon-link"></span></a>DAC</h2>
-  </li>
-</ol>
+<h2 id="data-model">
+<a class="anchor" href="#data-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data model</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Terminology:
+    - blob - a file (which is a bunch of bytes) is called a blob 
+    - tree - a directory is called a tree, it maps names to blobs or treees
+    ![](/Mrigank-blog/images/learning_git/blob_tree.png "credit: ./missing-semester")
+2. DAC:
+    - Each snapshot in git refers to a set of 'parents' (snapshots that preceded it).
+        ![](/Mrigank-blog/images/learning_git/dac_snapshots.png "credit: xkcd")
+    - A snapshot might descend from multiple parents (due to merging)
+        ![](/Mrigank-blog/images/learning_git/dac_snapshots_merging.png "credit: xkcd")
+</code></pre></div></div>
+
 
   </div><a class="u-url" href="/Mrigank-blog/markdown/2021/09/18/learning-git.html" hidden></a>
 </article>
