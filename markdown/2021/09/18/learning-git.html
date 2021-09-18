@@ -107,16 +107,26 @@ window.onload = wrap_img;
 
 <h2 id="data-model">
 <a class="anchor" href="#data-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data model</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Terminology:
-    - blob - a file (which is a bunch of bytes) is called a blob 
-    - tree - a directory is called a tree, it maps names to blobs or treees
-    ![](/Mrigank-blog/images/learning_git/blob_tree.png "credit: ./missing-semester")
-2. DAC:
-    - Each snapshot in git refers to a set of 'parents' (snapshots that preceded it).
-        ![](/Mrigank-blog/images/learning_git/dac_snapshots.png "credit: xkcd")
-    - A snapshot might descend from multiple parents (due to merging)
-        ![](/Mrigank-blog/images/learning_git/dac_snapshots_merging.png "credit: xkcd")
-</code></pre></div></div>
+<ol>
+  <li>Terminology:
+    <ul>
+      <li>blob - a file (which is a bunch of bytes) is called a blob</li>
+      <li>tree - a directory is called a tree, it maps names to blobs or treees
+ <img src="/Mrigank-blog/images/learning_git/blob_tree.png" alt="" title="credit: ./missing-semester">
+</li>
+    </ul>
+  </li>
+  <li>DAC:
+    <ul>
+      <li>Each snapshot in git refers to a set of ‘parents’ (snapshots that preceded it).
+  <img src="/Mrigank-blog/images/learning_git/dac_snapshots.png" alt="" title="credit: xkcd">
+</li>
+      <li>A snapshot might descend from multiple parents (due to merging)
+  <img src="/Mrigank-blog/images/learning_git/dac_snapshots_merging.png" alt="" title="credit: xkcd">
+</li>
+    </ul>
+  </li>
+</ol>
 
 
   </div><a class="u-url" href="/Mrigank-blog/markdown/2021/09/18/learning-git.html" hidden></a>
