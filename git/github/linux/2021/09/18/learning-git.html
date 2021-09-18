@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -101,10 +101,18 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#intro">Intro</a></li>
-<li class="toc-entry toc-h2"><a href="#data-model">Data model</a></li>
+<li class="toc-entry toc-h2"><a href="#data-model">Data model</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#terminology">Terminology:</a></li>
+<li class="toc-entry toc-h4"><a href="#dag-directed-acyclic-graph">DAG (directed acyclic graph):</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#command-line">Command line</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#basics">Basics</a></li>
+<li class="toc-entry toc-h4"><a href="#basics">Basics</a></li>
+<li class="toc-entry toc-h4"><a href="#branching--merging">Branching &amp; Merging</a></li>
+<li class="toc-entry toc-h4"><a href="#remotes">Remotes</a></li>
+<li class="toc-entry toc-h4"><a href="#advanced-git">Advanced git</a></li>
 </ul>
 </li>
 </ul><h2 id="intro">
@@ -118,38 +126,38 @@ window.onload = wrap_img;
 
 <h2 id="data-model">
 <a class="anchor" href="#data-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data model</h2>
-<ol>
-  <li>Terminology:
-    <ul>
-      <li>
+
+<h4 id="terminology">
+<a class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology:</h4>
+<ul>
+  <li>
 <strong>blob</strong> - a file (which is a bunch of bytes) is called a blob</li>
-      <li>
-<strong>tree</strong> - a directory is called a tree, it maps names to blobs or treees
+  <li>
+<strong>tree</strong> - a directory is called a tree, it maps names to blobs or treees</li>
+  <li>
+<strong>commits</strong> - snapshots are called commits.
   <img src="/Mrigank-blog/images/learning_git/blob_tree.png" alt="" title="credit: ./missing-semester">
 </li>
-      <li>
-<strong>commits</strong> - snapshots are called commits.</li>
-    </ul>
-  </li>
-  <li>DAG (directed acyclic graph):
-    <ul>
-      <li>Each snapshot in git refers to a set of ‘parents’ (snapshots that preceded it).
+</ul>
+
+<h4 id="dag-directed-acyclic-graph">
+<a class="anchor" href="#dag-directed-acyclic-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>DAG (directed acyclic graph):</h4>
+<ul>
+  <li>Each snapshot in git refers to a set of ‘parents’ (snapshots that preceded it).
   <img src="/Mrigank-blog/images/learning_git/dac_snapshots.png" alt="" title="credit: xkcd">
 </li>
-      <li>A snapshot might descend from multiple parents (due to merging)
+  <li>A snapshot might descend from multiple parents (due to merging)
   <img src="/Mrigank-blog/images/learning_git/dac_snapshots_merging.png" alt="" title="credit: xkcd">
 </li>
-      <li>The arrow points to the parent of each commit</li>
-      <li>Commits are immutable</li>
-    </ul>
-  </li>
-</ol>
+  <li>The arrow points to the parent of each commit</li>
+  <li>Commits are immutable</li>
+</ul>
 
 <h2 id="command-line">
 <a class="anchor" href="#command-line" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command line</h2>
 
-<h3 id="basics">
-<a class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h3>
+<h4 id="basics">
+<a class="anchor" href="#basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics</h4>
 <ul>
   <li>
 <code class="language-plaintext highlighter-rouge">git help &lt;command&gt;</code>: get help for a git command</li>
@@ -161,8 +169,11 @@ window.onload = wrap_img;
 <code class="language-plaintext highlighter-rouge">git add &lt;filename&gt;</code>: adds files to staging area</li>
   <li>
 <code class="language-plaintext highlighter-rouge">git commit</code>: creates a new commit
-  Write <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>!
-  Even more reasons to write <a href="https://chris.beams.io/posts/git-commit/">good commit messages</a>!</li>
+    <ul>
+      <li>Write <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>!</li>
+      <li>Even more reasons to write <a href="https://chris.beams.io/posts/git-commit/">good commit messages</a>!</li>
+    </ul>
+  </li>
   <li>
 <code class="language-plaintext highlighter-rouge">git log</code>: shows a flattened log of history</li>
   <li>
@@ -173,6 +184,69 @@ window.onload = wrap_img;
 <code class="language-plaintext highlighter-rouge">git diff &lt;revision&gt; &lt;filename&gt;</code>: shows differences in a file between snapshots</li>
   <li>
 <code class="language-plaintext highlighter-rouge">git checkout &lt;revision&gt;</code>: updates HEAD and current branch</li>
+</ul>
+
+<h4 id="branching--merging">
+<a class="anchor" href="#branching--merging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Branching &amp; Merging</h4>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">git branch</code>: shows branches</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git branch &lt;name&gt;</code>: creates a branch</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git checkout -b &lt;name&gt;</code>: creates a branch and switches to it
+    <ul>
+      <li>same as <code class="language-plaintext highlighter-rouge">git branch &lt;name&gt;; git checkout &lt;name&gt;</code>
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git merge &lt;revision&gt;</code>: merges into current branch</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git mergetool</code>: use a fancy tool to help resolve merge conflicts</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git rebase</code>: rebase set of patches onto a new base</li>
+</ul>
+
+<h4 id="remotes">
+<a class="anchor" href="#remotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Remotes</h4>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">git remote</code>: list remotes</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git remote add &lt;name&gt; &lt;url&gt;</code>: add a remote</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>: send objects to remote, and update remote reference</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: set up correspondence between local and remote branch</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git fetch</code>: retrieve objects/references from a remote</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git pull</code>: same as git fetch; git merge</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git clone</code>: download repository from remote</li>
+</ul>
+
+<h4 id="advanced-git">
+<a class="anchor" href="#advanced-git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced git</h4>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">git config</code>: Git is <a href="https://git-scm.com/docs/git-config">highly customizable</a>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git clone --depth=1</code>: shallow clone, without entire version history</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git add -p</code>: interactive staging</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git rebase -i</code>: interactive rebasing</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git blame</code>: show who last edited which line</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git stash</code>: temporarily remove modifications to working directory</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">git bisect</code>: binary search history (e.g. for regressions)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">.gitignore</code>: <a href="https://git-scm.com/docs/gitignore">specify</a> intentionally untracked files to ignore</li>
 </ul>
 
   </div><a class="u-url" href="/Mrigank-blog/git/github/linux/2021/09/18/learning-git.html" hidden></a>
