@@ -1,7 +1,6 @@
 ---
 toc: true
 layout: post
-description: My attempt to get comfortable with Git.
 categories: [git, github, linux]
 title: "Get good at Git!"
 ---

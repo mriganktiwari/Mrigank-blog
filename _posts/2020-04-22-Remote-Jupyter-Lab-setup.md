@@ -1,6 +1,5 @@
 ---
 title: "Run a remote Jupyter lab setup anywhere"
-description: "Using jupyter lab hosted on a remote server"
 layout: post
 toc: false
 categories: [setup, deep learning, gpu]

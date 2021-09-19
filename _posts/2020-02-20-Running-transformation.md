@@ -1,6 +1,5 @@
 ---
 title: "My running journey"
-description: "The longest and hardest running periods I lived yet."
 layout: post
 toc: false
 ---
