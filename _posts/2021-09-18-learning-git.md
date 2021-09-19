@@ -49,12 +49,6 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
     - move around in your version history
     - it not just moves you different brach names, but can also move you with hash ids
     - essentially it moves **HEAD** around
-    - Let's take a look at decorated logs
-        ![]({{ site.baseurl }}/images/learning_git/git_checkout_1.png "credit: xkcd")
-    - Let's move our HEAD to <commit a82dba6861f89136758bbda480f030292e9543ae>
-        ![]({{ site.baseurl }}/images/learning_git/git_checkout_2.png "credit: xkcd")
-    - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required)
-        ![]({{ site.baseurl }}/images/learning_git/git_checkout_3.png "credit: xkcd")
     
 #### Branching & Merging
 - ```git branch```: shows branches
