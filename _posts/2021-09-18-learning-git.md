@@ -6,7 +6,7 @@ categories: [git, github, linux]
 title: "Get good at Git!"
 ---
 
-## Intro
+## **Intro**
 
 I have been always felt tormented while using Git when working with teams or even alone. This below comic from xkcd aptly summarizes my experience with Git.
 
@@ -14,15 +14,15 @@ I have been always felt tormented while using Git when working with teams or eve
 
 To finally get comfortable, and efficiently use Git, I went through this lecture(link) from **Missing semester** course. Trying to summarize and demnstrate my learnings. Recommend this [video](https://missing.csail.mit.edu/2020/version-control/) and lecture notes for detailed walkthrough.
 
-## Data model
+## **Data model**
 
-#### Terminology:
+#### **Terminology**:
 - **blob** - a file (which is a bunch of bytes) is called a blob 
 - **tree** - a directory is called a tree, it maps names to blobs or treees
 - **commits** - snapshots are called commits.
     ![]({{ site.baseurl }}/images/learning_git/blob_tree.png "credit: ./missing-semester")
 
-#### DAG (directed acyclic graph):
+#### **DAG (directed acyclic graph)**:
 - Each snapshot in git refers to a set of 'parents' (snapshots that preceded it).
     ![]({{ site.baseurl }}/images/learning_git/dac_snapshots.png "credit: xkcd")
 - A snapshot might descend from multiple parents (due to merging)
@@ -30,9 +30,9 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 - The arrow points to the parent of each commit
 - Commits are immutable
 
-## Command line
+## **Command line**
 
-#### Basics
+#### **Basics**
 - ```git help <command>```: get help for a git command
 - ```git init```: creates a new git repo, with data stored in the .git directory
 - ```git status```: tells you what’s going on
@@ -56,7 +56,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
     - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required)
         ![]({{ site.baseurl }}/images/learning_git/checkout_3.png)
 
-#### Branching & Merging
+#### **Branching & Merging**
 - ```git branch```: shows branches
 - ```git branch <name>```: creates a branch
 - ```git checkout -b <name>```: creates a branch and switches to it
@@ -65,7 +65,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 - ```git mergetool```: use a fancy tool to help resolve merge conflicts
 - ```git rebase```: rebase set of patches onto a new base
 
-#### Remotes
+#### **Remotes**
 - ```git remote```: list remotes
 - ```git remote add <name> <url>```: add a remote
 - ```git push <remote> <local branch>:<remote branch>```: send objects to remote, and update remote reference
@@ -74,7 +74,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 - ```git pull```: same as git fetch; git merge
 - ```git clone```: download repository from remote
 
-#### Advanced git
+#### **Advanced git**
 - ```git config```: Git is [highly customizable](https://git-scm.com/docs/git-config)
 - ```git clone --depth=1```: shallow clone, without entire version history
 - ```git add -p```: interactive staging
