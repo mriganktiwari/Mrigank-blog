@@ -49,7 +49,8 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
     - move around in your version history
     - it not just moves you different brach names, but can also move you with hash ids
     - essentially it moves **HEAD** around
-    - ```
+    - Let's take a loo at decorated logs:
+        ```
         (base) ~/code/Mrigank-blog/images/learning_git on master
         $ git log --all --graph --decorate
         * commit 37f4256ef34c48179683448a6ae7cccac42098cc (HEAD -> master, origin/master, origin/HEAD)
@@ -87,7 +88,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 
         HEAD is now at a82dba6 Add basic git commands
         ```
-    - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required).
+    - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required)
         ```
         (base) ~/code/Mrigank-blog/images/learning_git on (HEAD detached at a82dba6)
         $ git log --all --graph --decorate
