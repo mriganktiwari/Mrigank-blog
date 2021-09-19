@@ -51,7 +51,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
     - essentially it moves **HEAD** around
     - Let's take a look at decorated logs
         ![]({{ site.baseurl }}/images/learning_git/checkout_1.png)
-    - Let's move our HEAD to <commit a82dba6861f89136758bbda480f030292e9543ae>
+    - Let's move our HEAD to commit #76c0a77c
         ![]({{ site.baseurl }}/images/learning_git/checkout_2.png)
     - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required)
         ![]({{ site.baseurl }}/images/learning_git/checkout_3.png)
