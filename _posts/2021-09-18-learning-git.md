@@ -46,7 +46,70 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 - ```git diff <filename>```: show changes you made relative to the staging area
 - ```git diff <revision> <filename>```: shows differences in a file between snapshots
 - ```git checkout <revision>```: updates HEAD and current branch
+    - move around in your version history
+    - it not just moves you different brach names, but can also move you with hash ids
+    - essentially it moves **HEAD** around
+    - ```
+        (base) ~/code/Mrigank-blog/images/learning_git on master
+        $ git log --all --graph --decorate
+        * commit 37f4256ef34c48179683448a6ae7cccac42098cc (HEAD -> master, origin/master, origin/HEAD)
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sun Sep 19 07:01:30 2021 +0530
+        |
+        |     pushing a change for git commit -a to test the same feature
+        |
+        * commit 29cfcf12e1c78d4def94ffb752966b961176ac4a
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sat Sep 18 22:54:34 2021 +0530
+        |
+        |     more git commands added
+        |
+        * commit a82dba6861f89136758bbda480f030292e9543ae
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sat Sep 18 22:45:12 2021 +0530
+        |
+        |     Add basic git commands
+        ```
+    - Let's move our HEAD to <commit a82dba6861f89136758bbda480f030292e9543ae>
+        ```
+        (base) ~/code/Mrigank-blog/images/learning_git on master
+        $ git checkout a82dba68
+        Note: checking out 'a82dba68'.
 
+        You are in 'detached HEAD' state. You can look around, make experimental
+        changes and commit them, and you can discard any commits you make in this
+        state without impacting any branches by performing another checkout.
+
+        If you want to create a new branch to retain commits you create, you may
+        do so (now or later) by using -b with the checkout command again. Example:
+
+        git checkout -b <new-branch-name>
+
+        HEAD is now at a82dba6 Add basic git commands
+        ```
+    - Now if we see git log (the decorated version) - HEAD is moved to the desired commit (snapshot) with hash key (that too not complete hash is required).
+        ```
+        (base) ~/code/Mrigank-blog/images/learning_git on (HEAD detached at a82dba6)
+        $ git log --all --graph --decorate
+        * commit 37f4256ef34c48179683448a6ae7cccac42098cc (origin/master, origin/HEAD, master)
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sun Sep 19 07:01:30 2021 +0530
+        |
+        |     pushing a change for git commit -a to test the same feature
+        |
+        * commit 29cfcf12e1c78d4def94ffb752966b961176ac4a
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sat Sep 18 22:54:34 2021 +0530
+        |
+        |     more git commands added
+        |
+        * commit a82dba6861f89136758bbda480f030292e9543ae (HEAD)
+        | Author: mriganktiwari <tiwarimrigank2@gmail.com>
+        | Date:   Sat Sep 18 22:45:12 2021 +0530
+        |
+        |     Add basic git commands
+        ```
+    
 #### Branching & Merging
 - ```git branch```: shows branches
 - ```git branch <name>```: creates a branch
