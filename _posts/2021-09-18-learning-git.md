@@ -40,6 +40,7 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
 - ```git commit```: creates a new commit
     - Write [good commit messages](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)!
     - Even more reasons to write [good commit messages](https://chris.beams.io/posts/git-commit/)!
+    - ```git commit -a```: commits all already tracked files by git without explicitly adding
 - ```git log```: shows a flattened log of history
 - ```git log --all --graph --decorate```: visualizes history as a DAG
 - ```git diff <filename>```: show changes you made relative to the staging area
