@@ -50,7 +50,8 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
     - it not just moves you different brach names, but can also move you with hash ids
     - essentially it moves **HEAD** around
     - Let's take a look at decorated logs
-        ```(base) ~/code/Mrigank-blog/images/learning_git on master
+        ```
+        (base) ~/code/Mrigank-blog/images/learning_git on master
         $ git log --all --graph --decorate
         * commit 37f4256ef34c48179683448a6ae7cccac42098cc (HEAD -> master, origin/master, origin/HEAD)
         | Author: mriganktiwari <tiwarimrigank2@gmail.com>
@@ -68,7 +69,8 @@ To finally get comfortable, and efficiently use Git, I went through this lecture
         | Author: mriganktiwari <tiwarimrigank2@gmail.com>
         | Date:   Sat Sep 18 22:45:12 2021 +0530
         |
-        |     Add basic git commands```
+        |     Add basic git commands
+        ```
     - Let's move our HEAD to <commit a82dba6861f89136758bbda480f030292e9543ae>
         ```
         (base) ~/code/Mrigank-blog/images/learning_git on master
