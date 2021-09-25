@@ -2,8 +2,8 @@
   
     
         "post0": {
-            "title": "I was missing tmux - from my workflow",
-            "content": "Intro . Navigating sessions and windows . |Command | Description | |——–|————-| |tmux | Create new session | |tmux new -s &lt;session name&gt; | Create new session with “name”| |C-b - % | Open new pane on vertically | |C-b - &quot; | Open new pane horizontally | . Detach &amp; attach sessions . Command Description . C-b - d | Detaches the active session | . tmux ls | List the detached sessions | . tmux attach -t &lt;session name&gt; | Attach a session, it preserves state | . tmux rename-session -t &lt;old name&gt; &lt;new name&gt; | Rename a detached session | . tmux kill-session -t &lt;session name&gt; |   | . # .",
+            "title": "Wish I knew tmux earlier",
+            "content": "Intro . Navigating sessions and windows . Command Description . tmux | Create new session | . tmux new -s &lt;session name&gt; | Create new session with “name” | . C-b - % | Open new pane on vertically | . C-b - &quot; | Open new pane horizontally | . Detach &amp; attach sessions . Command Description . C-b - d | Detaches the active session | . tmux ls | List the detached sessions | . tmux attach -t &lt;session name&gt; | Attach a session, it preserves state | . tmux rename-session -t &lt;old name&gt; &lt;new name&gt; | Rename a detached session | . tmux kill-session -t &lt;session name&gt; |   | . # .",
             "url": "https://mriganktiwari.github.io/Mrigank-blog/tmux/linux/2021/09/25/Learn_tmux.html",
             "relUrl": "/tmux/linux/2021/09/25/Learn_tmux.html",
             "date": " • Sep 25, 2021"
