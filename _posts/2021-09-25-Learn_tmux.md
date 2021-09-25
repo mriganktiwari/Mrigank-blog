@@ -5,7 +5,10 @@ categories: [tmux, linux]
 title: "Wish I knew tmux earlier"
 ---
 
-# Intro
+# Intro (```man tmux```)
+- tmux is a terminal multiplexer
+- it enables a number of terminals to be created, accessed, and controlled from a single screen.
+- tmux may be detached from a screen and continue running in the background, then later reattached.
 
 ## Sessions
 
@@ -40,7 +43,7 @@ title: "Wish I knew tmux earlier"
 |```<C-b>``` - ```<space>``` | Cycle through pane arrangements |
 
 
-# Detach & attach sessions
+## Detach & attach sessions
 
 |Command | Description |
 |--------|-------------|
@@ -50,5 +53,3 @@ title: "Wish I knew tmux earlier"
 |```tmux attach -t <session name>``` | Attach a session, it preserves state |
 |```tmux rename-session -t <old name> <new name>``` | Rename a detached session |
 |```tmux kill-session -t <session name>``` | 
-
-# 
