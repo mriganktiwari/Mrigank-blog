@@ -97,14 +97,19 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#intro">Intro</a></li>
-<li class="toc-entry toc-h1"><a href="#navigating-sessions-and-windows">Navigating sessions and windows</a></li>
+<li class="toc-entry toc-h1"><a href="#intro">Intro</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#sessions">Sessions</a></li>
+<li class="toc-entry toc-h2"><a href="#windows">Windows</a></li>
+<li class="toc-entry toc-h2"><a href="#panes">Panes</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#detach--attach-sessions">Detach &amp; attach sessions</a></li>
 </ul><h1 id="intro">
 <a class="anchor" href="#intro" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro</h1>
 
-<h1 id="navigating-sessions-and-windows">
-<a class="anchor" href="#navigating-sessions-and-windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigating sessions and windows</h1>
+<h2 id="sessions">
+<a class="anchor" href="#sessions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sessions</h2>
 
 <table>
   <thead>
@@ -122,17 +127,115 @@ window.onload = wrap_img;
       <td><code class="language-plaintext highlighter-rouge">tmux new -s &lt;session name&gt;</code></td>
       <td>Create new session with “name”</td>
     </tr>
+  </tbody>
+</table>
+
+<h2 id="windows">
+<a class="anchor" href="#windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows</h2>
+<ul>
+  <li>Equivalent to tabs in editors, visually seperate part of the same session</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
-<code class="language-plaintext highlighter-rouge">C-b</code> - <code class="language-plaintext highlighter-rouge">%</code>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">c</code>
+</td>
+      <td>Creates new window</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">&lt;C-d&gt;</code></td>
+      <td>Close a window</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">N</code>
+</td>
+      <td>Go to Nth window</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">p</code>
+</td>
+      <td>Go to previous window</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">n</code>
+</td>
+      <td>Go to next window</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">,</code>
+</td>
+      <td>Rename current window</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">w</code>
+</td>
+      <td>List current windows</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="panes">
+<a class="anchor" href="#panes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Panes</h2>
+<ul>
+  <li>Panes let you have multiple shells in the same display</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">%</code>
 </td>
       <td>Open new pane on vertically</td>
     </tr>
     <tr>
       <td>
-<code class="language-plaintext highlighter-rouge">C-b</code> - <code class="language-plaintext highlighter-rouge">"</code>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">"</code>
 </td>
       <td>Open new pane horizontally</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">&lt;arrow keys&gt;</code>
+</td>
+      <td>Jump to desired pane</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">z</code>
+</td>
+      <td>Toggle zoom for current pane</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">[</code>
+</td>
+      <td>Start scrollback. You can then press <code class="language-plaintext highlighter-rouge">&lt;space&gt;</code> to start a selection and <code class="language-plaintext highlighter-rouge">&lt;enter&gt;</code> to copy that selection</td>
+    </tr>
+    <tr>
+      <td>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">&lt;space&gt;</code>
+</td>
+      <td>Cycle through pane arrangements</td>
     </tr>
   </tbody>
 </table>
@@ -150,13 +253,17 @@ window.onload = wrap_img;
   <tbody>
     <tr>
       <td>
-<code class="language-plaintext highlighter-rouge">C-b</code> - <code class="language-plaintext highlighter-rouge">d</code>
+<code class="language-plaintext highlighter-rouge">&lt;C-b&gt;</code> - <code class="language-plaintext highlighter-rouge">d</code>
 </td>
-      <td>Detaches the active session</td>
+      <td>Detaches the current session</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">tmux ls</code></td>
       <td>List the detached sessions</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tmux attach a</code></td>
+      <td>Attaches the last session</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">tmux attach -t &lt;session name&gt;</code></td>
