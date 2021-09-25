@@ -2,12 +2,13 @@
 toc: true
 layout: post
 categories: [tmux, linux]
-title: "I was missing tmux - from my workflow"
+title: "Wish I knew tmux earlier"
 ---
 
 # Intro
 
 # Navigating sessions and windows
+
 |Command | Description |
 |--------|-------------|
 |```tmux``` | Create new session |
