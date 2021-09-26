@@ -8,15 +8,15 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Terminal commands" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="find" />
-<meta property="og:description" content="find" />
+<meta name="description" content="find Search by Type (file or dir)" />
+<meta property="og:description" content="find Search by Type (file or dir)" />
 <link rel="canonical" href="https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" />
 <meta property="og:url" content="https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" />
 <meta property="og:site_name" content="Mrigank Tiwari" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-02T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"find","url":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html","@type":"BlogPosting","headline":"Terminal commands","dateModified":"2020-06-02T00:00:00-05:00","datePublished":"2020-06-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html"},"@context":"https://schema.org"}</script>
+{"description":"find Search by Type (file or dir)","url":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html","@type":"BlogPosting","headline":"Terminal commands","dateModified":"2020-06-02T00:00:00-05:00","datePublished":"2020-06-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Mrigank-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mriganktiwari.github.io/Mrigank-blog/feed.xml" title="Mrigank Tiwari" /><link rel="shortcut icon" type="image/x-icon" href="/Mrigank-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -93,509 +93,291 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="find">find</h2>
-
-<p><code class="language-plaintext highlighter-rouge">man find</code></p>
-
+    <h1 id="find"><code class="language-plaintext highlighter-rouge">find</code></h1>
+<hr />
 <h3 id="search-by-type-file-or-dir">Search by Type (file or dir)</h3>
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find .</code></td>
-          <td>Find all the files &amp; directories under current directory</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt;</code></td>
-          <td>Find all the files &amp; directories under <dir></dir></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d</code></td>
-          <td>Find only directories under specific directory</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find . -type d</code></td>
-          <td>Find only directories under current directory</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f</code></td>
-          <td>Find only files under specific directory</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find . -type f</code></td>
-          <td>Find only files under current directory</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find .</code></td>
+      <td>Find all the files &amp; directories under current directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt;</code></td>
+      <td>Find all the files &amp; directories under <dir></dir></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d</code></td>
+      <td>Find only directories under specific directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find . -type d</code></td>
+      <td>Find only directories under current directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f</code></td>
+      <td>Find only files under specific directory</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find . -type f</code></td>
+      <td>Find only files under current directory</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="search-by-file-name">Search by file name</h3>
 
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "&lt;test1.txt&gt;"</code></td>
-          <td>Find a file with a specific name</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "&lt;test*&gt;"</code></td>
-          <td>Find a file starting with the name ‘test’</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -iname "&lt;test*&gt;"</code></td>
-          <td>Find a file starting with the name ‘test’ or ‘Test’ &amp; Case Insensitive</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -iname "&lt;*.py&gt;"</code></td>
-          <td>Find a file ending with the name ‘.py’ &amp; Case Insensitive</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "&lt;test1.txt&gt;"</code></td>
+      <td>Find a file with a specific name</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "&lt;test*&gt;"</code></td>
+      <td>Find a file starting with the name ‘test’</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -iname "&lt;test*&gt;"</code></td>
+      <td>Find a file starting with the name ‘test’ or ‘Test’ &amp; Case Insensitive</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -iname "&lt;*.py&gt;"</code></td>
+      <td>Find a file ending with the name ‘.py’ &amp; Case Insensitive</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="search-by-time--day">Search by time / day</h3>
 
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin -10</code> | All the files modified in last 10 mins |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +10</code> | All the files modified in more than last 10 mins ago |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +1 -mmin -5</code> | More than 1 min ago and less than 5 mins ago |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mtime -20</code> | Files modified less than 20 days ago |</p>
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin -10</code></td>
-          <td>All the files modified in last 10 mins</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +10</code></td>
-          <td>All the files modified in more than last 10 mins ago</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +1 -mmin -5</code></td>
-          <td>More than 1 min ago and less than 5 mins ago</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mtime -20</code></td>
-          <td>Files modified less than 20 days ago</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <ul>
-      <li>mmin, mtime</li>
-      <li>amin, atime</li>
-      <li>cmin, ctime</li>
-    </ul>
-  </li>
+  <li>mmin, mtime</li>
+  <li>amin, atime</li>
+  <li>cmin, ctime</li>
 </ul>
 
 <h3 id="search-by-file-size">Search by file size</h3>
 
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -size +5M</code> | Find all the files over 5 MB under <dir> directory |</dir></p>
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -size +5M</code></td>
-          <td>Find all the files over 5 MB under <dir> directory</dir></td>
-        </tr>
-      </tbody>
-    </table>
-    <ul>
-      <li>M - MB</li>
-      <li>k - KB</li>
-      <li>G - GB</li>
-    </ul>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">ls -lah &lt;dir&gt;</code></td>
-          <td>List all files and dirs with size in MB</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -empty</code></td>
-          <td>Find all empty files in <dir> directory</dir></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>M - MB</li>
+  <li>k - KB</li>
+  <li>G - GB
+| <code class="language-plaintext highlighter-rouge">ls -lah &lt;dir&gt;</code> | List all files and dirs with size in MB |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -empty</code> | Find all empty files in <dir> directory |</dir></li>
 </ul>
 
 <h3 id="search-based-on-permissions">Search based on permissions</h3>
 
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -perm 777</code></li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -perm 777</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="change-user--group-for-every-file--dir-under-">Change user &amp; group for every file &amp; dir under <dir></dir></h5>
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">-exec</code></td>
-          <td>Executes the following command on the results from preceding command</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">{}</code></td>
-          <td>Placeholder for just the filenamees that would be be used in case of chown command</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">+</code> or <code class="language-plaintext highlighter-rouge">\;</code></td>
-          <td>Either can be used to end the command</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -exec chown [user]:[group] {} +</code></li>
-</ul>
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">-exec</code> | Executes the following command on the results from preceding command |
+| <code class="language-plaintext highlighter-rouge">{}</code> | Placeholder for just the filenamees that would be be used in case of chown command |
+| <code class="language-plaintext highlighter-rouge">+</code> or <code class="language-plaintext highlighter-rouge">\;</code> | Either can be used to end the command |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -exec chown [user]:[group] {} +</code> | <strong>__</strong>___ |</p>
 
 <h5 id="lets-try-setting-permissions-of-all-directories-to-775-and-all-files-to-664">Lets try setting permissions of all directories to 775 and all files to 664</h5>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d -exec chmod 775 {} +</code></li>
-  <li><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -exec chmod 664 {} +</code></li>
-</ul>
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d -exec chmod 775 {} +</code>
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -exec chmod 664 {} +</code></p>
 
 <h3 id="search-and-perform-actions">Search and perform actions</h3>
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg"</code></td>
-          <td>Search all image files ending in .jpg in <dir> and subsequent directories</dir></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -maxdepth 1</code></td>
-          <td>Search all image files ending in .jpg only and only in <dir></dir></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -exec rm {} +</code></td>
-          <td>Deletes all the files returned from the command precesing <code class="language-plaintext highlighter-rouge">-exec</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -maxdepth 1 -exec rm {} +</code></td>
-          <td>Deletes all the files returned from the command precesing <code class="language-plaintext highlighter-rouge">-exec</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg"</code> | Search all image files ending in .jpg in <dir> and subsequent directories |
+| `find <dir> -type f -name "*.jpg" -maxdepth 1` | Search all image files ending in .jpg only and only in <dir> |
+| `find <dir> -type f -name "*.jpg" -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |
+| `find <dir> -type f -name "*.jpg" -maxdepth 1 -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |</dir></dir></dir></dir></dir></p>
 
-<h2 id="_grep-global-regular-expression-print">_grep (Global Regular Expression Print)</h2>
-
+<h1 id="_grep-global-regular-expression-print">_grep (Global Regular Expression Print)</h1>
+<hr />
 <ul>
   <li><code class="language-plaintext highlighter-rouge">grep</code> is case sensitive</li>
 </ul>
 
 <h3 id="finding-is-a-given-text-is-present-in-some-file">Finding is a given text is present in some file</h3>
-<ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep "text_to_find" &lt;file_name&gt;</code></td>
-          <td>Searching for some text in a normal file</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep -w "text_to_find" &lt;file_name&gt;</code></td>
-          <td>Return results from <code class="language-plaintext highlighter-rouge">file_name</code> only when whole words match <code class="language-plaintext highlighter-rouge">text_to_find</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep -wi "text_to_find" &lt;file_name&gt;</code></td>
-          <td>Returns results with both lower case and upper case with <code class="language-plaintext highlighter-rouge">text_to_find</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep "text_to_find" &lt;file_name&gt;</code></td>
+      <td>Searching for some text in a normal file</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -w "text_to_find" &lt;file_name&gt;</code></td>
+      <td>Return results from <code class="language-plaintext highlighter-rouge">file_name</code> only when whole words match <code class="language-plaintext highlighter-rouge">text_to_find</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -wi "text_to_find" &lt;file_name&gt;</code></td>
+      <td>Returns results with both lower case and upper case with <code class="language-plaintext highlighter-rouge">text_to_find</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="finding-some-additional-information">Finding some additional information</h3>
 
 <h5 id="line-number-of-where-we-found-our-match">Line number of where we found our match</h5>
 
 <ol>
-  <li><em>Returns results with line number.</em>
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" &lt;file_name&gt;</code></td>
-              <td>Returns results with line numbers in <code class="language-plaintext highlighter-rouge">file_name</code></td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" ./*</code></td>
-              <td>Returns results with line numbers in all files in current directory + Will throw error for any subdirectory that might be present.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" ./*.txt</code></td>
-              <td>Doesn’t try to search in any subdirectory.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -winr "text_to_find" .</code></td>
-              <td>To search every file and through every subdirectory, a recursive search, might get lot of results.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
-  </li>
-  <li><em>Getting some additional context of where this match is found, see a certain number of lines before and after a match.</em>
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win -B 4 "text_to_find" &lt;file_name&gt;</code></td>
-              <td>4 lines Before all of our match</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win -A 4 "text_to_find" &lt;file_name&gt;</code></td>
-              <td>4 lines After all of our match</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -win -C 2 "text_to_find" &lt;file_name&gt;</code></td>
-              <td>2 lines Before and After all of our match</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
-  </li>
-  <li><em>If you’re only interested in file_names with the matches, NOT in the matches themselves.</em>
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -wirl "text_to_find" .</code></td>
-              <td>Recursive result of all files with the match</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">grep -wirc "text_to_find" .</code></td>
-              <td>Recursive result of all files with the match + Number of matches in each file</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
-  </li>
+  <li><em>Returns results with line number.</em></li>
 </ol>
 
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" &lt;file_name&gt;</code></td>
+      <td>Returns results with line numbers in <code class="language-plaintext highlighter-rouge">file_name</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" ./*</code></td>
+      <td>Returns results with line numbers in all files in current directory + Will throw error for any subdirectory that might be present.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win "text_to_find" ./*.txt</code></td>
+      <td>Doesn’t try to search in any subdirectory.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -winr "text_to_find" .</code></td>
+      <td>To search every file and through every subdirectory, a recursive search, might get lot of results.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li><em>Getting some additional context of where this match is found, see a certain number of lines before and after a match.</em></li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win -B 4 "text_to_find" &lt;file_name&gt;</code></td>
+      <td>4 lines Before all of our match</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win -A 4 "text_to_find" &lt;file_name&gt;</code></td>
+      <td>4 lines After all of our match</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -win -C 2 "text_to_find" &lt;file_name&gt;</code></td>
+      <td>2 lines Before and After all of our match</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li><em>If you’re only interested in file_names with the matches, NOT in the matches themselves.</em></li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -wirl "text_to_find" .</code></td>
+      <td>Recursive result of all files with the match</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -wirc "text_to_find" .</code></td>
+      <td>Recursive result of all files with the match + Number of matches in each file</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="pipe-the-output-of-other-commands-in-to-grep-to-search-for-something">Pipe the output of other commands in to <strong>grep</strong> to search for something</h3>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">history | grep "git commit"</code></li>
-  <li><code class="language-plaintext highlighter-rouge">history | grep "git commit" | grep "dotfile"</code></li>
-</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">history | grep "git commit"</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">history | grep "git commit" | grep "dotfile"</code></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <h5 id="grep-uses-posix-regular-expressions-by-default"><strong>grep</strong> uses Posix regular expressions by default</h5>
+
+<p>|Command|Description|
+|—-   |—-       |
+| <code class="language-plaintext highlighter-rouge">grep "...-...-...." &lt;filename&gt;</code> |
+| <code class="language-plaintext highlighter-rouge">grep "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | This wouldn’t work, because this is pro compatible regular expressions which grep doesn’t use. |
+| <code class="language-plaintext highlighter-rouge">grep -P "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | This would allow it to work on Linux, NOT on Mac |
+| <code class="language-plaintext highlighter-rouge">grep -wirlP "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | Return recursive list of list with matching phone numbers |
+| <code class="language-plaintext highlighter-rouge">grep -V</code> |</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">grep "...-...-...." &lt;filename&gt;</code></li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
-          <td>This wouldn’t work, because this is pro compatible regular expressions which grep doesn’t use.</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep -P "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
-          <td>This would allow it to work on Linux, NOT on Mac</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td><code class="language-plaintext highlighter-rouge">grep -wirlP "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
-          <td>Return recursive list of list with matching phone numbers</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">grep -V</code>
-    <ul>
-      <li>Mac uses BSD grep</li>
-      <li>Linux uses GNU grep`</li>
-    </ul>
-  </li>
-  <li><code class="language-plaintext highlighter-rouge">brew install grep --with-default-names</code>
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td><code class="language-plaintext highlighter-rouge">--with-default-names</code></td>
-              <td>It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep)</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-    </ul>
-  </li>
+  <li>Mac uses BSD grep</li>
+  <li>Linux uses GNU grep<code class="language-plaintext highlighter-rouge">
+| </code>brew install grep –with-default-names<code class="language-plaintext highlighter-rouge"> |
+  | </code>–with-default-names` | It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep) |</li>
 </ul>
 
   </div><a class="u-url" href="/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" hidden></a>
