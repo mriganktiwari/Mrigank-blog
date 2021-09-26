@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="find Search by Type (file or dir)" />
 <meta property="og:description" content="find Search by Type (file or dir)" />
-<link rel="canonical" href="https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" />
-<meta property="og:url" content="https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" />
+<link rel="canonical" href="https://mriganktiwari.github.io/Mrigank-blog/linux/terminal/2020/06/02/Terminal_Find_Grep.html" />
+<meta property="og:url" content="https://mriganktiwari.github.io/Mrigank-blog/linux/terminal/2020/06/02/Terminal_Find_Grep.html" />
 <meta property="og:site_name" content="Mrigank Tiwari" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-06-02T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"find Search by Type (file or dir)","url":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html","@type":"BlogPosting","headline":"Terminal commands","dateModified":"2020-06-02T00:00:00-05:00","datePublished":"2020-06-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mriganktiwari.github.io/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html"},"@context":"https://schema.org"}</script>
+{"description":"find Search by Type (file or dir)","url":"https://mriganktiwari.github.io/Mrigank-blog/linux/terminal/2020/06/02/Terminal_Find_Grep.html","@type":"BlogPosting","headline":"Terminal commands","dateModified":"2020-06-02T00:00:00-05:00","datePublished":"2020-06-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mriganktiwari.github.io/Mrigank-blog/linux/terminal/2020/06/02/Terminal_Find_Grep.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Mrigank-blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://mriganktiwari.github.io/Mrigank-blog/feed.xml" title="Mrigank Tiwari" /><link rel="shortcut icon" type="image/x-icon" href="/Mrigank-blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -85,6 +85,9 @@ window.onload = wrap_img;
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
         <a class="category-tags-link" href="/Mrigank-blog/categories/#linux">linux</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/Mrigank-blog/categories/#terminal">terminal</a>
         
       
       </p>
@@ -232,7 +235,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h5 id="change-user--group-for-every-file--dir-under-dir">Change user &amp; group for every file &amp; dir under “dir”</h5>
+<h3 id="change-user--group-for-every-file--dir-under-dir">Change user &amp; group for every file &amp; dir under “dir”</h3>
 <p>|Command|Description|
 |—-   |—-       |
 | <code class="language-plaintext highlighter-rouge">-exec</code> | Executes the following command on the results from preceding command |
@@ -240,7 +243,7 @@ window.onload = wrap_img;
 | <code class="language-plaintext highlighter-rouge">+</code> or <code class="language-plaintext highlighter-rouge">\;</code> | Either can be used to end the command |
 | <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -exec chown [user]:[group] {} +</code> | xyz |</p>
 
-<h5 id="lets-try-setting-permissions-of-all-directories-to-775-and-all-files-to-664">Lets try setting permissions of all directories to 775 and all files to 664</h5>
+<h3 id="lets-try-setting-permissions-of-all-directories-to-775-and-all-files-to-664">Lets try setting permissions of all directories to 775 and all files to 664</h3>
 <p>|Command|Description|
 |—-   |—-       |
 | <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d -exec chmod 775 {} +</code> | xyz |
@@ -285,11 +288,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h3 id="finding-some-additional-information">Finding some additional information</h3>
-
-<h4 id="line-number-of-where-we-found-our-match">Line number of where we found our match</h4>
-
-<h5 id="returns-results-with-line-number">Returns results with line number</h5>
+<h3 id="returns-results-with-line-number">Returns results with line number</h3>
 
 <table>
   <thead>
@@ -318,7 +317,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h5 id="getting-some-additional-context-of-where-this-match-is-found-see-a-certain-number-of-lines-before-and-after-a-match">Getting some additional context of where this match is found, see a certain number of lines before and after a match</h5>
+<h3 id="getting-some-additional-context-of-where-this-match-is-found-see-a-certain-number-of-lines-before-and-after-a-match">Getting some additional context of where this match is found, see a certain number of lines before and after a match</h3>
 
 <table>
   <thead>
@@ -343,7 +342,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h5 id="if-youre-only-interested-in-file_names-with-the-matches-not-in-the-matches-themselves">If you’re only interested in file_names with the matches, NOT in the matches themselves</h5>
+<h3 id="if-youre-only-interested-in-file_names-with-the-matches-not-in-the-matches-themselves">If you’re only interested in file_names with the matches, NOT in the matches themselves</h3>
 
 <table>
   <thead>
@@ -385,7 +384,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h5 id="grep-uses-posix-regular-expressions-by-default"><code class="language-plaintext highlighter-rouge">grep</code> uses Posix regular expressions by default</h5>
+<h3 id="grep-uses-posix-regular-expressions-by-default"><code class="language-plaintext highlighter-rouge">grep</code> uses Posix regular expressions by default</h3>
 
 <table>
   <thead>
@@ -426,7 +425,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-  </div><a class="u-url" href="/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" hidden></a>
+  </div><a class="u-url" href="/Mrigank-blog/linux/terminal/2020/06/02/Terminal_Find_Grep.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
