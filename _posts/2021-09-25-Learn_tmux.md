@@ -17,6 +17,7 @@ title: "Wish I knew tmux earlier"
 |--------|-------------|
 |```tmux``` | Create new session |
 |```tmux new -s <session name>``` | Create new session with "name"|
+| ```exit``` | Exit with killing the session |
 
 ## Windows
 - Equivalent to tabs in editors, visually seperate part of the same session
@@ -53,4 +54,4 @@ title: "Wish I knew tmux earlier"
 |```tmux attach a``` | Attaches the last session |
 |```tmux attach -t <session name>``` | Attach a session, it preserves state |
 |```tmux rename-session -t <old name> <new name>``` | Rename a detached session |
-|```tmux kill-session -t <session name>``` | 
+|```tmux kill-session -t <session name>``` | Kill a dtached session |
