@@ -202,7 +202,7 @@ window.onload = wrap_img;
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -size +5M</code></td>
-      <td>Find all the files over 5 MB under <dir> directory</dir></td>
+      <td>Find all the files over 5 MB under directory</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">ls -lah &lt;dir&gt;</code></td>
@@ -210,7 +210,7 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -empty</code></td>
-      <td>Find all empty files in <dir> directory</dir></td>
+      <td>Find all empty files in directory</td>
     </tr>
   </tbody>
 </table>
@@ -227,32 +227,32 @@ window.onload = wrap_img;
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -perm 777</code></td>
-      <td> </td>
+      <td>xyv</td>
     </tr>
   </tbody>
 </table>
 
-<h5 id="change-user--group-for-every-file--dir-under-">Change user &amp; group for every file &amp; dir under <dir></dir></h5>
+<h5 id="change-user--group-for-every-file--dir-under-dir">Change user &amp; group for every file &amp; dir under “dir”</h5>
 <p>|Command|Description|
 |—-   |—-       |
 | <code class="language-plaintext highlighter-rouge">-exec</code> | Executes the following command on the results from preceding command |
 | <code class="language-plaintext highlighter-rouge">{}</code> | Placeholder for just the filenamees that would be be used in case of chown command |
 | <code class="language-plaintext highlighter-rouge">+</code> or <code class="language-plaintext highlighter-rouge">\;</code> | Either can be used to end the command |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -exec chown [user]:[group] {} +</code> | <strong>__</strong>___ |</p>
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -exec chown [user]:[group] {} +</code> | xyz |</p>
 
 <h5 id="lets-try-setting-permissions-of-all-directories-to-775-and-all-files-to-664">Lets try setting permissions of all directories to 775 and all files to 664</h5>
 <p>|Command|Description|
 |—-   |—-       |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d -exec chmod 775 {} +</code>
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -exec chmod 664 {} +</code></p>
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type d -exec chmod 775 {} +</code> | xyz |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -exec chmod 664 {} +</code> | xyz |</p>
 
 <h3 id="search-and-perform-actions">Search and perform actions</h3>
 <p>|Command|Description|
 |—-   |—-       |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg"</code> | Search all image files ending in .jpg in <dir> and subsequent directories |
-| `find <dir> -type f -name "*.jpg" -maxdepth 1` | Search all image files ending in .jpg only and only in <dir> |
-| `find <dir> -type f -name "*.jpg" -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |
-| `find <dir> -type f -name "*.jpg" -maxdepth 1 -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |</dir></dir></dir></dir></dir></p>
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg"</code> | Search all image files ending in .jpg in dir and subsequent directories |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -maxdepth 1</code> | Search all image files ending in .jpg only and only in dir |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -exec rm {} +</code> | Deletes all the files returned from the command precesing <code class="language-plaintext highlighter-rouge">-exec</code> |
+| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -name "*.jpg" -maxdepth 1 -exec rm {} +</code> | Deletes all the files returned from the command precesing <code class="language-plaintext highlighter-rouge">-exec</code> |</p>
 
 <h1 id="_grep-global-regular-expression-print">_grep (Global Regular Expression Print)</h1>
 <hr />
@@ -287,11 +287,9 @@ window.onload = wrap_img;
 
 <h3 id="finding-some-additional-information">Finding some additional information</h3>
 
-<h5 id="line-number-of-where-we-found-our-match">Line number of where we found our match</h5>
+<h4 id="line-number-of-where-we-found-our-match">Line number of where we found our match</h4>
 
-<ol>
-  <li><em>Returns results with line number.</em></li>
-</ol>
+<h5 id="returns-results-with-line-number">Returns results with line number</h5>
 
 <table>
   <thead>
@@ -320,9 +318,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<ol>
-  <li><em>Getting some additional context of where this match is found, see a certain number of lines before and after a match.</em></li>
-</ol>
+<h5 id="getting-some-additional-context-of-where-this-match-is-found-see-a-certain-number-of-lines-before-and-after-a-match">Getting some additional context of where this match is found, see a certain number of lines before and after a match</h5>
 
 <table>
   <thead>
@@ -347,9 +343,7 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<ol>
-  <li><em>If you’re only interested in file_names with the matches, NOT in the matches themselves.</em></li>
-</ol>
+<h5 id="if-youre-only-interested-in-file_names-with-the-matches-not-in-the-matches-themselves">If you’re only interested in file_names with the matches, NOT in the matches themselves</h5>
 
 <table>
   <thead>
@@ -391,21 +385,46 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h5 id="grep-uses-posix-regular-expressions-by-default"><strong>grep</strong> uses Posix regular expressions by default</h5>
+<h5 id="grep-uses-posix-regular-expressions-by-default"><code class="language-plaintext highlighter-rouge">grep</code> uses Posix regular expressions by default</h5>
 
-<p>|Command|Description|
-|—-   |—-       |
-| <code class="language-plaintext highlighter-rouge">grep "...-...-...." &lt;filename&gt;</code> |
-| <code class="language-plaintext highlighter-rouge">grep "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | This wouldn’t work, because this is pro compatible regular expressions which grep doesn’t use. |
-| <code class="language-plaintext highlighter-rouge">grep -P "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | This would allow it to work on Linux, NOT on Mac |
-| <code class="language-plaintext highlighter-rouge">grep -wirlP "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code> | Return recursive list of list with matching phone numbers |
-| <code class="language-plaintext highlighter-rouge">grep -V</code> |</p>
-<ul>
-  <li>Mac uses BSD grep</li>
-  <li>Linux uses GNU grep<code class="language-plaintext highlighter-rouge">
-| </code>brew install grep –with-default-names<code class="language-plaintext highlighter-rouge"> |
-  | </code>–with-default-names` | It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep) |</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep "...-...-...." &lt;filename&gt;</code></td>
+      <td>xyz</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
+      <td>This wouldn’t work, because this is pro compatible regular expressions which grep doesn’t use.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -P "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
+      <td>This would allow it to work on Linux, NOT on Mac</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -wirlP "\d{3}-\d{3}-\d{4}" &lt;filename&gt;</code></td>
+      <td>Return recursive list of list with matching phone numbers</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">grep -V</code></td>
+      <td>xyz</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">brew install grep --with-default-names</code></td>
+      <td>xyz</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">--with-default-names</code></td>
+      <td>It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep)</td>
+    </tr>
+  </tbody>
+</table>
 
   </div><a class="u-url" href="/Mrigank-blog/linux/2020/06/02/Terminal_Find_Grep.html" hidden></a>
 </article>
