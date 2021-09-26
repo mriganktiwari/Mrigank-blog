@@ -243,8 +243,6 @@ categories: [linux]
   mkntfs completed successfully. Have a nice day.
   ```
 
-  - 
-
 - ## Mounting the New Drive
 
   - We must mount the partition `/dev/sda1` on the new drive `/dev/sda` to a mount point in the file-system.
@@ -253,4 +251,5 @@ categories: [linux]
   - `sudo umount /mnt`
   - Add `/mnt` as bookmarks in file explorer.
 
+---
 - [Motivated by](https://www.howtogeek.com/442101/how-to-move-your-linux-home-directory-to-another-hard-drive/#comments)
