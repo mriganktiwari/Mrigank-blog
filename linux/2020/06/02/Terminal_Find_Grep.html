@@ -77,7 +77,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      4 min read
     
 </span></p>
 
@@ -161,32 +161,59 @@ window.onload = wrap_img;
   </tbody>
 </table>
 
-<h3 id="search-by-time--day">Search by time / day</h3>
+<h3 id="search-by-time-or-day">Search by time or day</h3>
 
-<p>|Command|Description|
-|—-   |—-       |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin -10</code> | All the files modified in last 10 mins |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +10</code> | All the files modified in more than last 10 mins ago |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +1 -mmin -5</code> | More than 1 min ago and less than 5 mins ago |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mtime -20</code> | Files modified less than 20 days ago |</p>
-<ul>
-  <li>mmin, mtime</li>
-  <li>amin, atime</li>
-  <li>cmin, ctime</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin -10</code></td>
+      <td>All the files modified in last 10 mins</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +10</code></td>
+      <td>All the files modified in more than last 10 mins ago</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mmin +1 -mmin -5</code></td>
+      <td>More than 1 min ago and less than 5 mins ago</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -type f -mtime -20</code></td>
+      <td>Files modified less than 20 days ago</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="search-by-file-size">Search by file size</h3>
 
-<p>|Command|Description|
-|—-   |—-       |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -size +5M</code> | Find all the files over 5 MB under <dir> directory |</dir></p>
-<ul>
-  <li>M - MB</li>
-  <li>k - KB</li>
-  <li>G - GB
-| <code class="language-plaintext highlighter-rouge">ls -lah &lt;dir&gt;</code> | List all files and dirs with size in MB |
-| <code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -empty</code> | Find all empty files in <dir> directory |</dir></li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -size +5M</code></td>
+      <td>Find all the files over 5 MB under <dir> directory</dir></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">ls -lah &lt;dir&gt;</code></td>
+      <td>List all files and dirs with size in MB</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">find &lt;dir&gt; -empty</code></td>
+      <td>Find all empty files in <dir> directory</dir></td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="search-based-on-permissions">Search based on permissions</h3>
 
