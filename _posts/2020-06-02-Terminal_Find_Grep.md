@@ -2,7 +2,7 @@
 title: "Terminal commands"
 layout: post
 toc: false
-categories: [linux]
+categories: [linux, terminal]
 ---
 
 # ```find```
@@ -50,7 +50,7 @@ categories: [linux]
 |----   |----       |
 | `find <dir> -perm 777` | xyv |
 
-##### Change user & group for every file & dir under "dir"
+### Change user & group for every file & dir under "dir"
 |Command|Description|
 |----   |----       |
 | `-exec` | Executes the following command on the results from preceding command |
@@ -58,7 +58,7 @@ categories: [linux]
 | `+` or `\;` | Either can be used to end the command |
 | `find <dir> -exec chown [user]:[group] {} +` | xyz |
 
-##### Lets try setting permissions of all directories to 775 and all files to 664
+### Lets try setting permissions of all directories to 775 and all files to 664
 |Command|Description|
 |----   |----       |
 | `find <dir> -type d -exec chmod 775 {} +` | xyz |
@@ -85,33 +85,29 @@ categories: [linux]
 | `grep -w "text_to_find" <file_name>` | Return results from `file_name` only when whole words match `text_to_find` |
 | `grep -wi "text_to_find" <file_name>` | Returns results with both lower case and upper case with `text_to_find` |
 
-### Finding some additional information
+### Returns results with line number
 
-#### Line number of where we found our match
+|Command|Description|
+|----   |----       |
+| `grep -win "text_to_find" <file_name>` | Returns results with line numbers in `file_name` |
+| `grep -win "text_to_find" ./*` | Returns results with line numbers in all files in current directory + Will throw error for any subdirectory that might be present. |
+| `grep -win "text_to_find" ./*.txt` | Doesn't try to search in any subdirectory. |
+| `grep -winr "text_to_find" .` | To search every file and through every subdirectory, a recursive search, might get lot of results. |
 
-##### Returns results with line number
+### Getting some additional context of where this match is found, see a certain number of lines before and after a match
 
-  |Command|Description|
-  |----   |----       |
-  | `grep -win "text_to_find" <file_name>` | Returns results with line numbers in `file_name` |
-  | `grep -win "text_to_find" ./*` | Returns results with line numbers in all files in current directory + Will throw error for any subdirectory that might be present. |
-  | `grep -win "text_to_find" ./*.txt` | Doesn't try to search in any subdirectory. |
-  | `grep -winr "text_to_find" .` | To search every file and through every subdirectory, a recursive search, might get lot of results. |
+|Command|Description|
+|----   |----       |
+| `grep -win -B 4 "text_to_find" <file_name>` | 4 lines Before all of our match |
+| `grep -win -A 4 "text_to_find" <file_name>` | 4 lines After all of our match |
+| `grep -win -C 2 "text_to_find" <file_name>` | 2 lines Before and After all of our match |
 
-##### Getting some additional context of where this match is found, see a certain number of lines before and after a match
-  
-  |Command|Description|
-  |----   |----       |
-  | `grep -win -B 4 "text_to_find" <file_name>` | 4 lines Before all of our match |
-  | `grep -win -A 4 "text_to_find" <file_name>` | 4 lines After all of our match |
-  | `grep -win -C 2 "text_to_find" <file_name>` | 2 lines Before and After all of our match |
+### If you're only interested in file_names with the matches, NOT in the matches themselves
 
-##### If you're only interested in file_names with the matches, NOT in the matches themselves
-  
-  |Command|Description|
-  |----   |----       |
-  | `grep -wirl "text_to_find" .` | Recursive result of all files with the match |
-  | `grep -wirc "text_to_find" .` | Recursive result of all files with the match + Number of matches in each file |
+|Command|Description|
+|----   |----       |
+| `grep -wirl "text_to_find" .` | Recursive result of all files with the match |
+| `grep -wirc "text_to_find" .` | Recursive result of all files with the match + Number of matches in each file |
 
 ### Pipe the output of other commands in to **grep** to search for something
 
@@ -120,7 +116,7 @@ categories: [linux]
 | `history | grep "git commit"` |
 | `history | grep "git commit" | grep "dotfile"` |
 
-##### ```grep``` uses Posix regular expressions by default
+### ```grep``` uses Posix regular expressions by default
 
 |Command|Description|
 |----   |----       |
@@ -130,4 +126,4 @@ categories: [linux]
 | `grep -wirlP "\d{3}-\d{3}-\d{4}" <filename>` | Return recursive list of list with matching phone numbers |
 | `grep -V` | xyz |
 | `brew install grep --with-default-names` | xyz |
-  | `--with-default-names` | It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep) |
+| `--with-default-names` | It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep) |
