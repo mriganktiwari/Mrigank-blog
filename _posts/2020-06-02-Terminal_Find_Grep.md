@@ -27,7 +27,7 @@ categories: [linux]
 | `find <dir> -type f -iname "<test*>"` | Find a file starting with the name 'test' or 'Test' & Case Insensitive |
 | `find <dir> -type f -iname "<*.py>"` | Find a file ending with the name '.py' & Case Insensitive |
 
-### Search by time / day
+### Search by time or day
 
 |Command|Description|
 |----   |----       |
@@ -35,18 +35,12 @@ categories: [linux]
 | `find <dir> -type f -mmin +10` | All the files modified in more than last 10 mins ago |
 | `find <dir> -type f -mmin +1 -mmin -5` | More than 1 min ago and less than 5 mins ago |
 | `find <dir> -type f -mtime -20` | Files modified less than 20 days ago |
-  - mmin, mtime
-  - amin, atime
-  - cmin, ctime
 
 ### Search by file size
 
 |Command|Description|
 |----   |----       |
 | `find <dir> -size +5M` | Find all the files over 5 MB under <dir> directory |
-  - M - MB
-  - k - KB
-  - G - GB
 | `ls -lah <dir>` | List all files and dirs with size in MB |
 | `find <dir> -empty` | Find all empty files in <dir> directory |
 
@@ -54,7 +48,7 @@ categories: [linux]
 
 |Command|Description|
 |----   |----       |
-| `find <dir> -perm 777`
+| `find <dir> -perm 777` |
 
 ##### Change user & group for every file & dir under <dir>
 |Command|Description|
