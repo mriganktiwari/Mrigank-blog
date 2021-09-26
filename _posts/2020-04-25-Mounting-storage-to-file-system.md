@@ -253,14 +253,4 @@ categories: [linux]
   - `sudo umount /mnt`
   - Add `/mnt` as bookmarks in file explorer.
 
-- 
-
-- 
-
-- 
-
-- 
-
-- [Motivated by](https://www.howtogeek.com/442101/how-to-move-your-linux-home-directory-to-another-hard-drive/#comments).
-
-  - 
+- [Motivated by](https://www.howtogeek.com/442101/how-to-move-your-linux-home-directory-to-another-hard-drive/#comments)
