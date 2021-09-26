@@ -40,36 +40,36 @@ categories: [linux]
 
 |Command|Description|
 |----   |----       |
-| `find <dir> -size +5M` | Find all the files over 5 MB under <dir> directory |
+| `find <dir> -size +5M` | Find all the files over 5 MB under directory |
 | `ls -lah <dir>` | List all files and dirs with size in MB |
-| `find <dir> -empty` | Find all empty files in <dir> directory |
+| `find <dir> -empty` | Find all empty files in directory |
 
 ### Search based on permissions
 
 |Command|Description|
 |----   |----       |
-| `find <dir> -perm 777` |
+| `find <dir> -perm 777` | xyv |
 
-##### Change user & group for every file & dir under <dir>
+##### Change user & group for every file & dir under "dir"
 |Command|Description|
 |----   |----       |
 | `-exec` | Executes the following command on the results from preceding command |
 | `{}` | Placeholder for just the filenamees that would be be used in case of chown command |
 | `+` or `\;` | Either can be used to end the command |
-| `find <dir> -exec chown [user]:[group] {} +` | _________ |
+| `find <dir> -exec chown [user]:[group] {} +` | xyz |
 
 ##### Lets try setting permissions of all directories to 775 and all files to 664
 |Command|Description|
 |----   |----       |
-| `find <dir> -type d -exec chmod 775 {} +`
-| `find <dir> -type f -exec chmod 664 {} +`
+| `find <dir> -type d -exec chmod 775 {} +` | xyz |
+| `find <dir> -type f -exec chmod 664 {} +` | xyz |
 
 
 ### Search and perform actions
 |Command|Description|
 |----   |----       |
-| `find <dir> -type f -name "*.jpg"` | Search all image files ending in .jpg in <dir> and subsequent directories |
-| `find <dir> -type f -name "*.jpg" -maxdepth 1` | Search all image files ending in .jpg only and only in <dir> |
+| `find <dir> -type f -name "*.jpg"` | Search all image files ending in .jpg in dir and subsequent directories |
+| `find <dir> -type f -name "*.jpg" -maxdepth 1` | Search all image files ending in .jpg only and only in dir |
 | `find <dir> -type f -name "*.jpg" -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |
 | `find <dir> -type f -name "*.jpg" -maxdepth 1 -exec rm {} +` | Deletes all the files returned from the command precesing `-exec` |
 
@@ -87,9 +87,9 @@ categories: [linux]
 
 ### Finding some additional information
 
-##### Line number of where we found our match
+#### Line number of where we found our match
 
-1. *Returns results with line number.*
+##### Returns results with line number
 
   |Command|Description|
   |----   |----       |
@@ -98,7 +98,7 @@ categories: [linux]
   | `grep -win "text_to_find" ./*.txt` | Doesn't try to search in any subdirectory. |
   | `grep -winr "text_to_find" .` | To search every file and through every subdirectory, a recursive search, might get lot of results. |
 
-2. *Getting some additional context of where this match is found, see a certain number of lines before and after a match.*
+##### Getting some additional context of where this match is found, see a certain number of lines before and after a match
   
   |Command|Description|
   |----   |----       |
@@ -106,7 +106,7 @@ categories: [linux]
   | `grep -win -A 4 "text_to_find" <file_name>` | 4 lines After all of our match |
   | `grep -win -C 2 "text_to_find" <file_name>` | 2 lines Before and After all of our match |
 
-3. *If you're only interested in file_names with the matches, NOT in the matches themselves.*
+##### If you're only interested in file_names with the matches, NOT in the matches themselves
   
   |Command|Description|
   |----   |----       |
@@ -120,16 +120,14 @@ categories: [linux]
 | `history | grep "git commit"` |
 | `history | grep "git commit" | grep "dotfile"` |
 
-##### **grep** uses Posix regular expressions by default
+##### ```grep``` uses Posix regular expressions by default
 
 |Command|Description|
 |----   |----       |
-| `grep "...-...-...." <filename>` |
+| `grep "...-...-...." <filename>` | xyz |
 | `grep "\d{3}-\d{3}-\d{4}" <filename>` | This wouldn't work, because this is pro compatible regular expressions which grep doesn't use. |
 | `grep -P "\d{3}-\d{3}-\d{4}" <filename>` | This would allow it to work on Linux, NOT on Mac |
 | `grep -wirlP "\d{3}-\d{3}-\d{4}" <filename>` | Return recursive list of list with matching phone numbers |
-| `grep -V` |
-  - Mac uses BSD grep
-  - Linux uses GNU grep`
-| `brew install grep --with-default-names` |
+| `grep -V` | xyz |
+| `brew install grep --with-default-names` | xyz |
   | `--with-default-names` | It will install it as grep, else as ggrep (allowing us to use both BSD and GNU grep) |
