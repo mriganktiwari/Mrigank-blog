@@ -1,1 +1,1 @@
-Sitemap: https://mriganktiwari.github.io/blog/sitemap.xml
+Sitemap: https://mriganktiwari.github.io/Mrigank-blog/sitemap.xml
